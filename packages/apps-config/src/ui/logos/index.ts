@@ -574,7 +574,7 @@ export const nodeLogos = Object.entries({
   'substrate-contracts-node': nodeSubstrateContractsNode,
   'substrate-node': nodeSubstrate,
   'subzero node': nodeZero,
-  'SugarFunge': nodeSugarFunge,
+  'SugarFunge node': nodeSugarFunge,
   swapdex: nodeSwapdex,
   t0rn: chainT0rn,
   'Ternoa Node': nodeTernoa,
