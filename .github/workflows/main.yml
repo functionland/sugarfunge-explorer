@@ -21,3 +21,35 @@ jobs:
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/explorer:${{ github.sha }}
             docker tag ${{ secrets.REGISTRY_LOGIN_SERVER }}/explorer:${{ github.sha }} ${{ secrets.REGISTRY_LOGIN_SERVER }}/explorer:latest
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/explorer:latest
+        - uses: slackapi/slack-github-action@v1.18.0
+          with:
+            channel-id: ${{ secrets.SUGARFUNGE_SLACK_CHANNEL_ID }}
+            payload: |
+              {
+                "text": "sugarfunge-explorer Image Updated",
+                "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "<https://github.com/SugarFunge/sugarfunge-explorer | sugarfunge-explorer> Image Updated :white_check_mark:\n Remember to run `docker-compose pull` to update the image if you're using the `latest` tag!"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*Commit:* <${{ github.event.pull_request.html_url || github.event.head_commit.url }} | ${{ github.sha }}>"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*Author:* ${{ github.event.pusher.name }}"
+                    }
+                  }
+                ]
+              }
+          env:
+            SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
