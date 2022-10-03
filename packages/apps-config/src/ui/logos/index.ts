@@ -210,6 +210,7 @@ import nodeSubsocialX from './nodes/subsocialX.svg';
 import nodeSubspace from './nodes/subspace.png';
 import nodeSubstrateContractsNode from './nodes/substrate-contracts-node.png';
 import nodeSubstrate from './nodes/substrate-hexagon.svg';
+import nodeSugarFunge from './nodes/sugarfunge.svg';
 import nodeSwapdex from './nodes/swapdex.svg';
 import nodeTernoa from './nodes/ternoa.svg';
 import nodeTrustBase from './nodes/trustbase.png';
@@ -424,6 +425,7 @@ export const chainLogos = Object.entries({
   subsocialX: nodeSubsocialX,
   subspace: nodeSubspace,
   Subzero: nodeZero,
+  'SugarFunge': nodeSugarFunge,
   swapdex: nodeSwapdex,
   t0rn: chainT0rn,
   Tick: chainRococoTick,
@@ -627,6 +629,7 @@ export const nodeLogos = Object.entries({
   'substrate-contracts-node': nodeSubstrateContractsNode,
   'substrate-node': nodeSubstrate,
   'subzero node': nodeZero,
+  'SugarFunge node': nodeSugarFunge,
   swapdex: nodeSwapdex,
   t0rn: chainT0rn,
   'Ternoa Node': nodeTernoa,
@@ -925,6 +928,7 @@ export const namedLogos: Record<string, unknown> = {
   'subspace-gemini-2a': nodeSubspace,
   substrate: nodeSubstrate,
   substrateContractsNode: nodeSubstrateContractsNode,
+  sugarfunge: nodeSugarFunge,
   swapdex: nodeSwapdex,
   t0rn: chainT0rn,
   tanganika: chainKusamaDataHighway,

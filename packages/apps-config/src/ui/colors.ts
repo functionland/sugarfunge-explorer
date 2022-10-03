@@ -141,6 +141,7 @@ const chainSnakenet = '#f653a2';
 const chainSora = '#2D2926';
 const chainSpanner = '#EC3D3D';
 const chainStandard = 'background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(42,170,244,1) 35%, rgba(10,10,10,1) 100%)';
+const chainSugarFunge = '#D90C51';
 const chainSwapdex = '#E94082';
 const chainSubDAO = 'linear-gradient(50deg, #F20092 0%, #FF4D5D 100%)';
 const chainTinker = '#161616';
@@ -231,6 +232,7 @@ const nodeSubDAO = 'linear-gradient(50deg, #F20092 0%, #FF4D5D 100%)';
 const nodeSubsocial = '#b9018c';
 const nodeSubsocialX = '#69058C';
 const nodeSubspace = '#562b8e';
+const nodeSugarFunge = chainSugarFunge;
 const nodeSwapdex = '#E94082';
 const nodeTernoa = '#d622ff';
 const nodeUniarts = chainUniarts;
@@ -458,6 +460,7 @@ export const chainColors: Record<string, string> = Object.entries({
   'SubGame Staging': nodeSubGame,
   Subspace: nodeSubspace,
   Subzero: chainZero,
+  'SugarFunge': nodeSugarFunge,
   swapdex: chainSwapdex,
   t0rn: chainT0rn,
   Tick: chainRoccoTick,
@@ -589,6 +592,7 @@ export const nodeColors = Object.entries({
   'subsocial node': nodeSubsocial,
   Subspace: nodeSubspace,
   'subzero node': nodeZero,
+  'SugarFunge': nodeSugarFunge,
   swapdex: nodeSwapdex,
   'Ternoa Node': nodeTernoa,
   'uni arts node': nodeUniarts,
