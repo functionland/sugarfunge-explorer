@@ -22,7 +22,17 @@ export const prodParasKusama: EndpointOption[] = [
     text: 'Altair',
     providers: {
       Centrifuge: 'wss://fullnode.altair.centrifuge.io',
-      OnFinality: 'wss://altair.api.onfinality.io/public-ws'
+      OnFinality: 'wss://altair.api.onfinality.io/public-ws',
+      Dwellir: 'wss://altair-rpc.dwellir.com'
+    }
+  },
+  {
+    info: 'amplitude',
+    homepage: 'https://pendulumchain.org/amplitude',
+    paraId: 2124,
+    text: 'Amplitude',
+    providers: {
+      PendulumChain: 'wss://rpc.pendulumchain.tech'
     }
   },
   {
@@ -31,17 +41,18 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2119,
     text: 'Bajun Network',
     providers: {
-      AjunaNetwork: 'wss://rpc-parachain.bajun.network'
+      AjunaNetwork: 'wss://rpc-parachain.bajun.network',
+      Dwellir: 'wss://bajun-rpc.dwellir.com',
+      OnFinality: 'wss://bajun.api.onfinality.io/public-ws'
     }
   },
   {
     info: 'basilisk',
-    homepage: 'https://bsx.fi',
+    homepage: 'https://app.basilisk.cloud',
     paraId: 2090,
     text: 'Basilisk',
     providers: {
-      HydraDX: 'wss://rpc-01.basilisk.hydradx.io',
-      OnFinality: 'wss://basilisk.api.onfinality.io/public-ws',
+      Basilisk: 'wss://rpc.basilisk.cloud',
       Dwellir: 'wss://basilisk-rpc.dwellir.com'
     }
   },
@@ -51,9 +62,7 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2001,
     text: 'Bifrost',
     providers: {
-      'Liebi 0': 'wss://bifrost-rpc.liebi.com/ws',
-      'Liebi 1': 'wss://us.bifrost-rpc.liebi.com/ws',
-      'Liebi 2': 'wss://eu.bifrost-rpc.liebi.com/ws',
+      Liebi: 'wss://bifrost-rpc.liebi.com/ws',
       OnFinality: 'wss://bifrost-parachain.api.onfinality.io/public-ws',
       Dwellir: 'wss://bifrost-rpc.dwellir.com'
     }
@@ -64,7 +73,6 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2096,
     text: 'Bit.Country Pioneer',
     providers: {
-      'Bit.Country': 'wss://pioneer-1-rpc.bit.country',
       OnFinality: 'wss://pioneer.api.onfinality.io/public-ws'
     }
   },
@@ -74,9 +82,7 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2084,
     text: 'Calamari',
     providers: {
-      'Manta Network': 'wss://ws.calamari.systems/',
-      OnFinality: 'wss://calamari.api.onfinality.io/public-ws',
-      Dwellir: 'wss://calamari-rpc.dwellir.com'
+      'Manta Network': 'wss://ws.calamari.systems/'
     }
   },
   {
@@ -89,12 +95,22 @@ export const prodParasKusama: EndpointOption[] = [
     }
   },
   {
+    info: 'shadow',
+    homepage: 'https://crust.network/',
+    paraId: 2225,
+    text: 'Crust Shadow 2',
+    isUnreachable: true,
+    providers: {
+      Crust: 'wss://rpc-shadow.crust.network/'
+    }
+  },
+  {
     info: 'crab',
     homepage: 'https://crab.network',
     paraId: 2105,
-    text: 'Darwinia Crab Parachain',
+    text: 'Darwinia Crab',
     providers: {
-      Crab: 'wss://crab-parachain-rpc.darwinia.network/'
+      'Darwinia Network': 'wss://crab-parachain-rpc.darwinia.network/'
     }
   },
   {
@@ -117,6 +133,20 @@ export const prodParasKusama: EndpointOption[] = [
     }
   },
   {
+    info: 'gm',
+    homepage: 'https://gmordie.com',
+    paraId: 2123,
+    text: 'GM',
+    providers: {
+      GMorDieDAO: 'wss://kusama.gmordie.com',
+      'bLd Nodes': 'wss://ws.gm.bldnodes.org',
+      TerraBioDAO: 'wss://ws-node-gm.terrabiodao.org',
+      Leemo: 'wss://leemo.gmordie.com',
+      'GM Intern': 'wss://intern.gmordie.com',
+      'light client': 'light://substrate-connect/kusama/gm'
+    }
+  },
+  {
     info: 'imbue',
     homepage: 'https://imbue.network',
     paraId: 2121,
@@ -132,7 +162,8 @@ export const prodParasKusama: EndpointOption[] = [
     text: 'Integritee Network',
     providers: {
       Integritee: 'wss://kusama.api.integritee.network',
-      OnFinality: 'wss://integritee-kusama.api.onfinality.io/public-ws'
+      OnFinality: 'wss://integritee-kusama.api.onfinality.io/public-ws',
+      Dwellir: 'wss://integritee-ksm-rpc.dwellir.com'
     }
   },
   {
@@ -141,7 +172,8 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2125,
     text: 'InvArch Tinkernet',
     providers: {
-      'InvArch Team': 'wss://tinker.invarch.network'
+      'InvArch Team': 'wss://tinker.invarch.network',
+      'light client': 'light://substrate-connect/kusama/tinkernet'
     }
   },
   {
@@ -150,7 +182,7 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2113,
     text: 'Kabocha',
     providers: {
-      JelliedOwl: 'wss://kabocha.jelliedowl.com'
+      JelliedOwl: 'wss://kabocha.jelliedowl.net'
     }
   },
   {
@@ -188,17 +220,6 @@ export const prodParasKusama: EndpointOption[] = [
     providers: {
       'DICO Foundation': 'wss://rpc.kico.dico.io',
       'DICO Foundation 2': 'wss://rpc.api.kico.dico.io'
-    }
-  },
-  {
-    info: 'kilt',
-    homepage: 'https://www.kilt.io/',
-    paraId: 2086,
-    text: 'KILT Spiritnet',
-    providers: {
-      'KILT Protocol': 'wss://spiritnet.kilt.io/',
-      OnFinality: 'wss://spiritnet.api.onfinality.io/public-ws',
-      Dwellir: 'wss://kilt-rpc.dwellir.com'
     }
   },
   {
@@ -296,13 +317,20 @@ export const prodParasKusama: EndpointOption[] = [
     }
   },
   {
+    info: 'heiko',
+    homepage: 'https://parallel.fi',
+    paraId: 2126,
+    isUnreachable: true,
+    text: 'Parallel Heiko 2',
+    providers: {}
+  },
+  {
     info: 'picasso',
     homepage: 'https://picasso.composable.finance/',
     paraId: 2087,
     text: 'Picasso',
     providers: {
-      Composable: 'wss://picasso-rpc.composable.finance',
-      Dwellir: 'wss://picasso-rpc.dwellir.com'
+      Composable: 'wss://picasso-rpc.composable.finance'
     }
   },
   {
@@ -311,7 +339,8 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2102,
     text: 'Pichiu',
     providers: {
-      'Kylin Network': 'wss://kusama.kylin-node.co.uk'
+      'Kylin Network': 'wss://kusama.kylin-node.co.uk',
+      OnFinality: 'wss://pichiu.api.onfinality.io/public-ws'
     }
   },
   {
@@ -343,7 +372,8 @@ export const prodParasKusama: EndpointOption[] = [
     text: 'Robonomics',
     providers: {
       Airalab: 'wss://kusama.rpc.robonomics.network/',
-      OnFinality: 'wss://robonomics.api.onfinality.io/public-ws'
+      OnFinality: 'wss://robonomics.api.onfinality.io/public-ws',
+      Dwellir: 'wss://robonomics-rpc.dwellir.com'
     }
   },
   {
@@ -363,9 +393,10 @@ export const prodParasKusama: EndpointOption[] = [
     text: 'Shiden',
     providers: {
       StakeTechnologies: 'wss://rpc.shiden.astar.network',
+      Blast: 'wss://shiden.public.blastapi.io',
+      Dwellir: 'wss://shiden-rpc.dwellir.com',
       OnFinality: 'wss://shiden.api.onfinality.io/public-ws',
-      Pinknode: 'wss://public-rpc.pinknode.io/shiden',
-      Dwellir: 'wss://shiden-rpc.dwellir.com'
+      Pinknode: 'wss://public-rpc.pinknode.io/shiden'
     }
   },
   {
@@ -379,17 +410,27 @@ export const prodParasKusama: EndpointOption[] = [
     }
   },
   {
+    info: 'snow',
+    homepage: 'https://icenetwork.io/snow',
+    paraId: 2129,
+    text: 'Snow Network',
+    isUnreachable: true,
+    providers: {
+      IceNetwork: 'wss://snow-rpc.icenetwork.io'
+    }
+  },
+  {
     info: 'sora_ksm',
-    isUnreachable: true, // https://github.com/polkadot-js/apps/issues/7721
     homepage: 'https://sora.org/',
     paraId: 2011,
-    text: 'SORA Kusama Parachain',
+    text: 'SORA',
     providers: {
       Soramitsu: 'wss://ws.parachain-collator-1.c1.sora2.soramitsu.co.jp'
     }
   },
   {
     info: 'subgame',
+    isUnreachable: true, // https://github.com/polkadot-js/apps/issues/7982
     homepage: 'http://subgame.org/',
     paraId: 2018,
     text: 'SubGame Gamma',
@@ -430,7 +471,6 @@ export const prodParasKusama: EndpointOption[] = [
     text: 'Turing Network',
     providers: {
       OAK: 'wss://rpc.turing.oak.tech',
-      OnFinality: 'wss://turing.api.onfinality.io/public-ws',
       Dwellir: 'wss://turing-rpc.dwellir.com'
     }
   },
@@ -449,7 +489,7 @@ export const prodParasKusama: EndpointOption[] = [
     paraId: 2101,
     text: 'Zeitgeist',
     providers: {
-      ZeitgeistPM: 'wss://rpc-0.zeitgeist.pm',
+      // ZeitgeistPM: 'wss://rpc-0.zeitgeist.pm', // https://github.com/polkadot-js/apps/issues/7982
       Dwellir: 'wss://zeitgeist-rpc.dwellir.com',
       OnFinality: 'wss://zeitgeist.api.onfinality.io/public-ws'
     }
@@ -464,7 +504,9 @@ export const prodParasKusamaCommon: EndpointOption[] = [
     providers: {
       Parity: 'wss://statemine-rpc.polkadot.io',
       OnFinality: 'wss://statemine.api.onfinality.io/public-ws',
-      Dwellir: 'wss://statemine-rpc.dwellir.com'
+      Dwellir: 'wss://statemine-rpc.dwellir.com',
+      Pinknode: 'wss://public-rpc.pinknode.io/statemine',
+      RadiumBlock: 'wss://statemine.public.curie.radiumblock.xyz/ws'
     },
     teleport: [-1]
   },
@@ -490,9 +532,10 @@ export const prodRelayKusama: EndpointOption = {
     Parity: 'wss://kusama-rpc.polkadot.io',
     OnFinality: 'wss://kusama.api.onfinality.io/public-ws',
     Dwellir: 'wss://kusama-rpc.dwellir.com',
-    RadiumBlock: 'wss://kusama.public.curie.radiumblock.co/ws',
+    RadiumBlock: 'wss://kusama.public.curie.radiumblock.xyz/ws',
+    Pinknode: 'wss://public-rpc.pinknode.io/kusama',
     // 'Geometry Labs': 'wss://kusama.geometry.io/websockets', // https://github.com/polkadot-js/apps/pull/6746
-    // Pinknode: 'wss://rpc.pinknode.io/kusama/explorer' // https://github.com/polkadot-js/apps/issues/5721
+    'Automata 1RPC': 'wss://1rpc.io/ksm',
     'light client': 'light://substrate-connect/kusama'
   },
   teleport: [1000, 1001],
