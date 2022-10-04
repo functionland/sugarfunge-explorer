@@ -130,6 +130,7 @@ import nodeEfinity from './nodes/efinity.svg';
 import nodeEncointer from './nodes/encointer-blue.svg';
 import nodeFantour from './nodes/fantour.png';
 import nodeFrequency from './nodes/frequencyRococo.png';
+import nodeFunctionland from './nodes/functionland.svg';
 import nodeGalital from './nodes/galital-logo.png';
 import nodeGamePower from './nodes/gamepower.svg';
 import nodeGeek from './nodes/geek.svg';
@@ -210,7 +211,7 @@ import nodeSubsocialX from './nodes/subsocialX.svg';
 import nodeSubspace from './nodes/subspace.png';
 import nodeSubstrateContractsNode from './nodes/substrate-contracts-node.png';
 import nodeSubstrate from './nodes/substrate-hexagon.svg';
-import nodeSugarFunge from './nodes/sugarfunge.svg';
+import nodeSugarFunge from './nodes/functionland.svg';
 import nodeSwapdex from './nodes/swapdex.svg';
 import nodeTernoa from './nodes/ternoa.svg';
 import nodeTrustBase from './nodes/trustbase.png';
@@ -291,6 +292,7 @@ export const chainLogos = Object.entries({
   Equilibrium: chainEquilibrium,
   'Equilibrium parachain': chainEquilibrium,
   EquilibriumTestnet: chainEquilibrium,
+  'functionland node': nodeFunctionland,
   Galital: nodeGalital,
   'GamePower Network': nodeGamePower,
   GEEK: nodeGeek,
@@ -520,6 +522,7 @@ export const nodeLogos = Object.entries({
   'Encointer collator': nodeEncointer,
   'Encointer Node noTEE': nodeEncointer,
   'Fantour Node': nodeFantour,
+  'functionland node': nodeFunctionland,
   'Galital Parachain Collator': nodeGalital,
   'GamePower Node': nodeGamePower,
   GEEK: nodeGeek,
@@ -664,6 +667,7 @@ export const nodeLogos = Object.entries({
 
 // Alphabetical overrides based on the actual specName
 export const specLogos = Object.entries({
+  'functionland node': nodeFunctionland,
   oak: chainOAK,
   shell: nodeShell,
   statemine: nodeStatemine,
@@ -738,6 +742,7 @@ export const namedLogos: Record<string, unknown> = {
   encointer: nodeEncointer,
   equilibrium: chainEquilibrium,
   fantour: nodeFantour,
+  'functionland node': nodeFunctionland,
   galital: nodeGalital,
   galois: nodeMath,
   gamepower: nodeGamePower,
