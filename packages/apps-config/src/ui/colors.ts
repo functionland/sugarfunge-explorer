@@ -53,6 +53,7 @@ const chainDotMog = '#020609';
 const chainEfinity = '#496ddb';
 const chainEquilibrium = '#1792ff';
 const chainFantour = '#5a189a';
+const chainFunctionland = '#219786';
 const chainGalital = '#00063F';
 const chainGalois = '#000000';
 const chainGamePower = '#5d21a5';
@@ -185,6 +186,7 @@ const nodeEdgeware = '#111111';
 const nodeEfinity = '#496ddb';
 const nodeEncointer = '#0000cc';
 const nodeFantour = '#5a189a';
+const nodeFunctionland = '#219786';
 const nodeGalital = '#00063F;';
 const nodeGamePower = '#5d21a5';
 const nodeGeek = '#4f46e5';
@@ -328,6 +330,7 @@ export const chainColors: Record<string, string> = Object.entries({
   'Equilibrium parachain': chainEquilibrium,
   EquilibriumTestnet: chainGenshiro,
   'Fantour Development': chainFantour,
+  'functionland node': chainFunctionland,
   Galital: chainGalital,
   'Galois-PoC-1': chainGalois,
   'GamePower Network': chainGamePower,
@@ -523,6 +526,7 @@ export const nodeColors = Object.entries({
   'Encointer collator': nodeEncointer,
   'Encointer Node noTEE': nodeEncointer,
   'Fantour Development': nodeFantour,
+  'functionland node': nodeFunctionland,
   Galital: nodeGalital,
   'Galital Parachain Collator': nodeGalital,
   'GamePower Node': nodeGamePower,
