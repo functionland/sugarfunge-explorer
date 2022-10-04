@@ -24,7 +24,7 @@ function ChainImg ({ className = '', isInline, logo, onClick, withoutHl }: Props
   const [isEmpty, img] = useMemo((): [boolean, string] => {
     const found = logo
       ? namedLogos[logo]
-      : chainLogos[sanitize(systemChain)] || nodeLogos[sanitize(systemName)] || specLogos[sanitize(specName)];
+      : specLogos[sanitize(specName)] || chainLogos[sanitize(systemChain)] || nodeLogos[sanitize(systemName)];
 
     return [!found || logo === 'empty', (found || emptyLogos.empty) as string];
   }, [logo, specName, systemChain, systemName]);

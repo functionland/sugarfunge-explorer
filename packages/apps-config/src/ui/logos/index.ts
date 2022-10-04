@@ -668,6 +668,7 @@ export const specLogos = Object.entries({
   shell: nodeShell,
   statemine: nodeStatemine,
   statemint: nodeStatemine,
+  "sugarfunge node": nodeSugarFunge,
   turing: chainTuring,
   westmint: nodeStatemine
 }).reduce<Record<string, unknown>>((logos, [spec, logo]) => ({
