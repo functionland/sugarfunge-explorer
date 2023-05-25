@@ -135,6 +135,7 @@ export { nodesSubstrateCircleSVG } from './generated/substrate-circleSVG.js';
 export { nodesSubstrateContractsNodePNG } from './generated/substrate-contracts-nodePNG.js';
 export { nodesSubstrateHexagonSVG } from './generated/substrate-hexagonSVG.js';
 export { nodesSubstrateWhiteSVG } from './generated/substrate-whiteSVG.js';
+export { nodesSugarfungeSVG } from './generated/sugarfungeSVG.js';
 export { nodesSwapdexSVG } from './generated/swapdexSVG.js';
 export { nodesT3rnPNG } from './generated/t3rnPNG.js';
 export { nodesTernoaSVG } from './generated/ternoaSVG.js';
