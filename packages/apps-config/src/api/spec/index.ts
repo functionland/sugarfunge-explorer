@@ -115,6 +115,7 @@ import subgame from './subgame.js';
 import subsocial from './subsocial.js';
 import subspace from './subspace.js';
 import substrateContractsNode from './substrateContractsNode.js';
+import sugarfunge from './sugarfunge.js';
 import swapdex from './swapdex.js';
 import t0rn from './t0rn.js';
 import ternoa from './ternoa.js';
@@ -277,6 +278,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   subspace,
   'substrate-contracts-node': substrateContractsNode,
   subzero: zero,
+  'sugarfunge-node': sugarfunge,
   swapdex,
   t0rn,
   ternoa,
