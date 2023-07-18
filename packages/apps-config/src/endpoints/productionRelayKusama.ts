@@ -5,7 +5,7 @@ import type { EndpointOption } from './types.js';
 
 import { KUSAMA_GENESIS } from '../api/constants.js';
 import { chainsAbandPNG, chainsAltairSVG, chainsAmplitudeSVG, chainsDorafactoryPNG, chainsGenshiroSVG, chainsGmJPEG, chainsKaruraSVG, chainsKicoPNG, chainsKintsugiPNG, chainsKusamaSVG, chainsListenPNG, chainsMangataPNG, chainsRiodefiPNG, chainsShidenPNG, chainsTinkerPNG, chainsTuringPNG, chainsUnorthodoxPNG } from '../ui/logos/chains/index.js';
-import { nodesApronPNG, nodesAresMarsPNG, nodesBajunPNG, nodesBasiliskPNG, nodesBifrostSVG, nodesBitcountryPNG, nodesBridgeHubBlackSVG, nodesCalamariPNG, nodesCrabSVG, nodesDatahighwayPNG, nodesEncointerBlueSVG, nodesImbuePNG, nodesIntegriteeSVG, nodesIpciSVG, nodesKabochaSVG, nodesKhalaSVG, nodesKrestPNG, nodesLitmusPNG, nodesLoomNetworkPNG, nodesMoonriverSVG, nodesParallelSVG, nodesPicassoPNG, nodesPichiuPNG, nodesPolkasmithSVG, nodesQuartzPNG, nodesRobonomicsSVG, nodesSakuraSVG, nodesShadowSVG, nodesSnowPNG, nodesSoraSubstrateSVG, nodesStatemineSVG, nodesSubgameSVG, nodesSubsocialXSVG, nodesTrustbasePNG, nodesZeroSVG } from '../ui/logos/nodes/index.js';
+import { nodesApronPNG, nodesAresMarsPNG, nodesAssetHubSVG, nodesBajunPNG, nodesBasiliskPNG, nodesBifrostSVG, nodesBitcountryPNG, nodesBridgeHubBlackSVG, nodesCalamariPNG, nodesCrabSVG, nodesDatahighwayPNG, nodesEncointerBlueSVG, nodesImbuePNG, nodesIntegriteeSVG, nodesIpciSVG, nodesKabochaSVG, nodesKhalaSVG, nodesKrestPNG, nodesLitmusPNG, nodesLoomNetworkPNG, nodesMoonriverSVG, nodesParallelSVG, nodesPicassoPNG, nodesPichiuPNG, nodesPolkasmithSVG, nodesQuartzPNG, nodesRobonomicsSVG, nodesSakuraSVG, nodesShadowSVG, nodesSnowPNG, nodesSoraSubstrateSVG, nodesSubgameSVG, nodesSubsocialXSVG, nodesTrustbasePNG, nodesZeroSVG } from '../ui/logos/nodes/index.js';
 import { getTeleports } from './util.js';
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
@@ -133,7 +133,8 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'crab',
     paraId: 2105,
     providers: {
-      'Darwinia Network': 'wss://crab-rpc.darwinia.network/',
+      Darwinia: 'wss://crab-rpc.darwinia.network/',
+      'Darwinia Community': 'wss://crab-rpc.darwiniacommunitydao.xyz',
       Dwellir: 'wss://darwiniacrab-rpc.dwellir.com',
       OnFinality: 'wss://crab.api.onfinality.io/public-ws'
     },
@@ -195,12 +196,11 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
-    homepage: 'https://genshiro.equilibrium.io',
-    info: 'genshiro',
-    isUnreachable: true,
+    homepage: 'https://genshiro..io',
+    info: 'Genshiro',
     paraId: 2024,
     providers: {
-      Equilibrium: 'wss://node.genshiro.io'
+      Genshiro: 'wss://node.ksm.genshiro.io'
     },
     text: 'Genshiro',
     ui: {
@@ -245,7 +245,7 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'imbue',
     paraId: 2121,
     providers: {
-      // 'Imbue Network': 'wss://imbue-kusama.imbue.network' // https://github.com/polkadot-js/apps/issues/9300
+      'Imbue Network': 'wss://collator.production.imbue.network'
     },
     text: 'Imbue Network',
     ui: {
@@ -361,7 +361,9 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'kintsugi',
     paraId: 2092,
     providers: {
+      Dwellir: 'wss://kintsugi-rpc.dwellir.com',
       'Kintsugi Labs': 'wss://api-kusama.interlay.io/parachain',
+      LuckyFriday: 'wss://rpc-kintsugi.luckyfriday.io/',
       OnFinality: 'wss://kintsugi.api.onfinality.io/public-ws'
     },
     text: 'Kintsugi BTC',
@@ -388,7 +390,9 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     homepage: 'https://krest.peaq.network/',
     info: 'krest',
     paraId: 2241,
-    providers: {},
+    providers: {
+      Krest: 'wss://wss-krest.peaq.network/'
+    },
     text: 'Krest',
     ui: {
       logo: nodesKrestPNG
@@ -438,7 +442,8 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'mangata',
     paraId: 2110,
     providers: {
-      Mangata: 'wss://kusama-archive.mangata.online'
+      'Mangata Archive': 'wss://kusama-archive.mangata.online',
+      'Mangata RPC': 'wss://kusama-rpc.mangata.online'
     },
     text: 'Mangata',
     ui: {
@@ -465,6 +470,7 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     paraId: 2023,
     providers: {
       Blast: 'wss://moonriver.public.blastapi.io',
+      Dwellir: 'wss://moonriver-rpc.dwellir.com',
       'Moonbeam Foundation': 'wss://wss.api.moonriver.moonbeam.network',
       OnFinality: 'wss://moonriver.api.onfinality.io/public-ws',
       UnitedBloc: 'wss://moonriver.unitedbloc.com'
@@ -506,7 +512,9 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'picasso',
     paraId: 2087,
     providers: {
-      Composable: 'wss://rpc.composablenodes.tech'
+      Composable: 'wss://rpc.composablenodes.tech',
+      Dwellir: 'wss://picasso-rpc.dwellir.com',
+      LuckyFriday: 'wss://rpc-picasso.luckyfriday.io'
     },
     text: 'Picasso',
     ui: {
@@ -519,7 +527,7 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'pichiu',
     paraId: 2102,
     providers: {
-      'Kylin Network': 'wss://kusama.kylin-node.co.uk'
+      // 'Kylin Network': 'wss://kusama.kylin-node.co.uk' // https://github.com/polkadot-js/apps/issues/9560
     },
     text: 'Pichiu',
     ui: {
@@ -676,10 +684,9 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
   {
     homepage: 'http://subgame.org/',
     info: 'subgame',
-    isUnreachable: true, // https://github.com/polkadot-js/apps/issues/7982
     paraId: 2018,
     providers: {
-      SubGame: 'wss://gamma.subgame.org/'
+      // SubGame: 'wss://gamma.subgame.org/' // https://github.com/polkadot-js/apps/issues/7982
     },
     text: 'SubGame Gamma',
     ui: {
@@ -769,23 +776,39 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
 
 export const prodParasKusamaCommon: EndpointOption[] = [
   {
-    info: 'statemine',
+    info: 'KusamaAssetHub',
     paraId: 1000,
     providers: {
       Dwellir: 'wss://statemine-rpc.dwellir.com',
       'Dwellir Tunisia': 'wss://statemine-rpc-tn.dwellir.com',
       'IBP-GeoDNS1': 'wss://sys.ibp.network/statemine',
       'IBP-GeoDNS2': 'wss://sys.dotters.network/statemine',
-      LuckyFriday: 'wss://rpc-statemine.luckyfriday.io',
+      LuckyFriday: 'wss://rpc-asset-hub-kusama.luckyfriday.io',
       OnFinality: 'wss://statemine.api.onfinality.io/public-ws',
-      Parity: 'wss://statemine-rpc.polkadot.io',
-      RadiumBlock: 'wss://statemine.public.curie.radiumblock.co/ws'
+      Parity: 'wss://kusama-asset-hub-rpc.polkadot.io',
+      RadiumBlock: 'wss://statemine.public.curie.radiumblock.co/ws',
+      Stakeworld: 'wss://ksm-rpc.stakeworld.io/assethub'
     },
     teleport: [-1],
-    text: 'Statemine',
+    text: 'AssetHub',
     ui: {
       color: '#113911',
-      logo: nodesStatemineSVG
+      logo: nodesAssetHubSVG
+    }
+  },
+  {
+    info: 'kusamaBridgeHub',
+    paraId: 1002,
+    providers: {
+      'IBP-GeoDNS1': 'wss://sys.ibp.network/bridgehub-kusama',
+      'IBP-GeoDNS2': 'wss://sys.dotters.network/bridgehub-kusama',
+      LuckyFriday: 'wss://rpc-bridge-hub-kusama.luckyfriday.io',
+      Parity: 'wss://kusama-bridge-hub-rpc.polkadot.io',
+      Stakeworld: 'wss://ksm-rpc.stakeworld.io/bridgehub'
+    },
+    text: 'BridgeHub',
+    ui: {
+      logo: nodesBridgeHubBlackSVG
     }
   },
   {
@@ -796,26 +819,14 @@ export const prodParasKusamaCommon: EndpointOption[] = [
       'Encointer Association': 'wss://kusama.api.encointer.org',
       'IBP-GeoDNS1': 'wss://sys.ibp.network/encointer-kusama',
       'IBP-GeoDNS2': 'wss://sys.dotters.network/encointer-kusama',
-      OnFinality: 'wss://encointer.api.onfinality.io/public-ws'
+      OnFinality: 'wss://encointer.api.onfinality.io/public-ws',
+      Stakeworld: 'wss://ksm-rpc.stakeworld.io/encointer'
     },
-    teleport: [-1],
+    teleport: [], // teleport is temporarily disabled until xcm V3 is supported
     text: 'Encointer Network',
     ui: {
       color: '#0000cc',
       logo: nodesEncointerBlueSVG
-    }
-  },
-  {
-    info: 'kusamaBridgeHub',
-    paraId: 1002,
-    providers: {
-      'IBP-GeoDNS1': 'wss://sys.ibp.network/bridgehub-kusama',
-      'IBP-GeoDNS2': 'wss://sys.dotters.network/bridgehub-kusama',
-      Parity: 'wss://kusama-bridge-hub-rpc.polkadot.io'
-    },
-    text: 'BridgeHub',
-    ui: {
-      logo: nodesBridgeHubBlackSVG
     }
   }
 ];
@@ -847,6 +858,7 @@ export const prodRelayKusama: EndpointOption = {
   text: 'Kusama',
   ui: {
     color: '#000000',
+    identityIcon: 'polkadot',
     logo: chainsKusamaSVG
   }
 };

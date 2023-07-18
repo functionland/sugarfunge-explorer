@@ -1,6 +1,7 @@
 // Copyright 2017-2023 @polkadot/app-assets authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+// augment package
 import '@polkadot/api-augment/substrate';
 
 import type { BN } from '@polkadot/util';
@@ -49,11 +50,11 @@ function AssetApp ({ basePath, className }: Props): React.ReactElement<Props> {
     {
       isRoot: true,
       name: 'overview',
-      text: t<string>('Overview')
+      text: t('Overview')
     },
     {
       name: 'balances',
-      text: t<string>('Balances')
+      text: t('Balances')
     }
   ]);
 
