@@ -135,8 +135,6 @@ import zeitgeist from './zeitgeist.js';
 import zenlink from './zenlink.js';
 import zero from './zero.js';
 import functionland from './functionland';
-import joystream from './joystream';
-import kilt from './kilt';
 
 // NOTE: The mapping is done from specName in state.getRuntimeVersion
 const spec: Record<string, OverrideBundleDefinition> = {
