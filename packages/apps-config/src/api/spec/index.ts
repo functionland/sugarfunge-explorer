@@ -134,6 +134,9 @@ import zCloak from './zCloak.js';
 import zeitgeist from './zeitgeist.js';
 import zenlink from './zenlink.js';
 import zero from './zero.js';
+import functionland from './functionland';
+import joystream from './joystream';
+import kilt from './kilt';
 
 // NOTE: The mapping is done from specName in state.getRuntimeVersion
 const spec: Record<string, OverrideBundleDefinition> = {
@@ -193,6 +196,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'encointer-node-teeproxy': encointerNodeTeeproxy,
   'encointer-parachain': encointerPara,
   fantour,
+  'functionland-node':functionland,
   // See https://github.com/polkadot-js/apps/pull/9243
   // fragnova,
   // 'fragnova-testnet': fragnova,
