@@ -1,12 +1,11 @@
-// Copyright 2017-2023 @polkadot/apps-config authors & contributors
+// Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { BN } from '@polkadot/util';
-import type { ExternalDef } from './types.js';
 
-import { externalPolkassemblyPNG } from '../ui/logos/external/index.js';
+import { externalLogos } from '../ui/logos';
 
-export const PolkassemblyIo: ExternalDef = {
+export const PolkassemblyIo = {
   chains: {
     Altair: 'Altair',
     Astar: 'astar',
@@ -27,35 +26,31 @@ export const PolkassemblyIo: ExternalDef = {
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
     `https://${chain}.polkassembly.io/${path}/${data.toString()}`,
-  homepage: 'https://polkassembly.io/',
   isActive: true,
+  logo: externalLogos.polkassembly as string,
   paths: {
     bounty: 'bounty',
     council: 'motion',
-    democracyProposal: 'proposal',
-    democracyReferendum: 'referendum',
-    fellowshipReferenda: 'member-referenda',
-    referenda: 'referenda',
+    proposal: 'proposal',
+    referendum: 'referendum',
     tip: 'tip',
     treasury: 'treasury'
   },
-  ui: {
-    logo: externalPolkassemblyPNG
-  }
+  url: 'https://polkassembly.io/'
 };
 
-export const PolkassemblyNetwork: ExternalDef = {
+export const PolkassemblyNetwork = {
   ...PolkassemblyIo,
   chains: {
     Bifrost: 'bifrost',
     'KILT Spiritnet': 'kilt',
     Karura: 'karura',
     'Khala Network': 'khala',
-    'Moonbase Alpha': 'moonbase',
+    Moonbase: 'moonbase',
     Moonbeam: 'moonbeam',
     Moonriver: 'moonriver'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
     `https://${chain}.polkassembly.network/${path}/${data.toString()}`,
-  homepage: 'https://polkassembly.network/'
+  url: 'https://polkassembly.network/'
 };

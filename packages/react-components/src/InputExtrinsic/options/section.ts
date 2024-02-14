@@ -1,8 +1,9 @@
-// Copyright 2017-2023 @polkadot/react-components authors & contributors
+// Copyright 2017-2022 @polkadot/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ApiPromise } from '@polkadot/api';
-import type { DropdownOptions } from '../../util/types.js';
+import type { DropdownOptions } from '../../util/types';
+
+import { ApiPromise } from '@polkadot/api';
 
 export default function createOptions (api: ApiPromise, filter?: (section: string, method?: string) => boolean): DropdownOptions {
   return Object

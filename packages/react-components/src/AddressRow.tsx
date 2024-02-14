@@ -1,17 +1,17 @@
-// Copyright 2017-2023 @polkadot/react-components authors & contributors
+// Copyright 2017-2022 @polkadot/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { AccountId, AccountIndex, Address } from '@polkadot/types/interfaces';
-import type { RowProps } from './Row.js';
 
 import React from 'react';
+import styled from 'styled-components';
 
 import { useAccountInfo } from '@polkadot/react-hooks';
 import BaseIdentityIcon from '@polkadot/react-identicon';
 
-import IdentityIcon from './IdentityIcon/index.js';
-import Row from './Row.js';
-import { styled } from './styled.js';
+import IdentityIcon from './IdentityIcon';
+import Row, { RowProps } from './Row';
+import { toShortAddress } from './util';
 
 export interface Props extends RowProps {
   isContract?: boolean;
@@ -20,7 +20,7 @@ export interface Props extends RowProps {
   label?: string;
   noDefaultNameOpacity?: boolean;
   overlay?: React.ReactNode;
-  value?: AccountId | AccountIndex | Address | string | null;
+  value: AccountId | AccountIndex | Address | string;
   withSidebar?: boolean;
   withTags?: boolean;
 }
@@ -36,8 +36,8 @@ function AddressRow ({ buttons, children, className, defaultName, fullLength = f
   const address = value && isValid ? value : DEFAULT_ADDR;
 
   return (
-    <StyledRow
-      address={address}
+    <Row
+      address={fullLength ? address : toShortAddress(address)}
       buttons={buttons}
       className={className}
       defaultName={defaultName}
@@ -51,23 +51,25 @@ function AddressRow ({ buttons, children, className, defaultName, fullLength = f
       isEditableName={isEditableName}
       isEditableTags
       isInline={isInline}
-      isShortAddr={!fullLength}
       name={name}
       onChangeName={setName}
       onChangeTags={setTags}
       onSaveName={onSaveName}
       onSaveTags={onSaveTags}
-      tags={withTags ? tags : undefined}
+      tags={withTags && tags}
     >
       {children}
       {overlay}
-    </StyledRow>
+    </Row>
   );
 }
 
-export { AddressRow, DEFAULT_ADDR };
+export {
+  DEFAULT_ADDR,
+  AddressRow
+};
 
-const StyledRow = styled(Row)`
+export default React.memo(styled(AddressRow)`
   button.u.ui--Icon.editButton {
     padding: 0 .3em .3em .3em;
     color: #2e86ab;
@@ -105,8 +107,6 @@ const StyledRow = styled(Row)`
   }
 
   .ui--AddressRow-placeholder {
-    opacity: var(--opacity-light);
+    opacity: 0.5;
   }
-`;
-
-export default React.memo(AddressRow);
+`);
